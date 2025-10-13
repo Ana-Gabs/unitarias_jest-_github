@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-//const crypto = require('crypto');
+const crypto = require('crypto');
 const bcrypt = require('bcrypt');
 
 router.use(express.json());
@@ -208,7 +208,7 @@ router.post('/verify-rsa', (req, res) => {
 
 router.post('/hash', (req, res) => {
   const data = req.body;
-  const crypto = require('crypto');
+  //const crypto = require('crypto');
 
   const hash = crypto.createHash('sha512');
 
